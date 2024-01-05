@@ -7,23 +7,23 @@ const calculator = {
 
 function calculate(SetUp) {
   if (operator === 'Solid Cylinder') {
-    return 0.5*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 0.5*mass*radius* Math.pow(radius,2);
   } else if (operator === 'Hoop') {
-    return mass*radius* Math.pow(radius,2);
+    calculator.displayValue = mass*radius* Math.pow(radius,2);
   } else if (operator === 'Solid Sphere') {
-    return 2/5*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 2/5*mass*radius* Math.pow(radius,2);
   }else if(operator === 'SolidCylinderAboutCentralDia'){
-    return 1/4*mass*Math.pow(radius,2)+(1/12)*mass*Math.pow(Length,2);
+    calculator.displayValue = 1/4*mass*Math.pow(radius,2)+(1/12)*mass*Math.pow(Length,2);
   }else if(operator === 'HoopAboutDiameter'){
-    return 1/2*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 1/2*mass*radius* Math.pow(radius,2);
   }else if(operator === 'Rod about center of mass'){
-    return 1/2*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 1/2*mass*radius* Math.pow(radius,2);
   }else if(operator === 'ThinSphericalShell'){
-    return 2/3*mass*Math.pow(radius,2)
+    calculator.displayValue = 2/3*mass*Math.pow(radius,2)
   }else if(operator === 'RodAboutEnd'){
-    return 1/3*mass*Math.pow(Length,2);
+    calculator.displayValue = 1/3*mass*Math.pow(Length,2);
   }else{
-    return CMInertia+mass*math.pow(Length,2);
+    calculator.displayValue = CMInertia+mass*math.pow(Length,2);
   }
 }
 
