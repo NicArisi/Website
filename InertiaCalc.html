@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" href="InertiaCalcCSS.css">
+<script src="inertiaJS.JS"></script>
+</head>
+<body>
+
+<div class="InertiaCalc" >
+
+  <p>Input all your neccesary data about your object to get the inertia. Click on object type to output data</p>
+  
+    <form>
+      <input type="text" class="calculator-screen" value="" disabled />
+      <label for="fname">Mass</label>
+      <input type="text" id="Mass" name="Mass"><br><br>
+      
+      <label for="Radius">Radius</label>
+      <input type="text" id="Radius" name="Radius"><br><br>
+      
+      <label for="Length">Length</label>
+      <input type="text" id="Length" name="Length"><br><br>
+      
+      <label for="CMInertia">Center of mass inertia</label>
+      <input type="text" id="CMInertia" name="CMInertia"><br><br>
+      <div class="InertiaType" >
+        <input type="button" value="Solid Cylinder" onclick="calculate('Solid Cylinder')">
+        <input type="button" value="Hoop" onclick="calculate('Hoop')">
+        <input type="button" value="Solid Sphere" onclick="calculate('Solid Sphere')">
+        <input type="button" value="Rod about center of mass" onclick="calculate('Rod about center of mass')">
+        <input type="button" value="Solid cylinder about central diameter" onclick="calculate('SolidCylinderAboutCentralDia')">
+        <input type="button" value="Hoop about diameter" onclick="calculate('HoopAboutDiameter')">
+        <input type="button" value="Thin spherical shell" onclick="calculate('ThinSphericalShell')">
+        <input type="button" value="Rod about end" onclick="calculate('RodAboutEnd')">
+        <input type="button" value="Parallel Axis Theorom" onclick="calculate()">
+        <input type="button" value="All-clear" onclick="resetCalculator()">
+      </div>
+    </form>
+</div>
+</body>
+</html>
