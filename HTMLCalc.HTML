@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" href="CSSCALC.css">
+<script src="JSCALC.js"></script>
+</head>
+<body>
+
+<div class="calculator" >
+
+  <input type="text" class="calculator-screen" value="" disabled />
+  
+  <div class="calculator-keys" >
+    
+    <button type="button" class="operator" onclick= "handleOperator('+');   updateDisplay()" value="+">+</button>
+    <button type="button" class="operator" onclick= "handleOperator('-'); updateDisplay()" value="-">-</button>
+    <button type="button" class="operator" onclick= "handleOperator('*'); updateDisplay()" value="*">&times;</button>
+    <button type="button" class="operator" onclick= "handleOperator('/'); updateDisplay()" value="/">&divide;</button>
+
+    <button type="button" onclick= "inputDigit('7'); updateDisplay()" value="7">7</button>
+    <button type="button" onclick= "inputDigit('8'); updateDisplay()" value="8">8</button>
+    <button type="button" onclick= "inputDigit('9'); updateDisplay()" value="9">9</button>
+
+
+    <button type="button" onclick= "inputDigit('4'); updateDisplay()" value="4">4</button>
+    <button type="button" onclick= "inputDigit('5'); updateDisplay()" value="5">5</button>
+    <button type="button" onclick= "inputDigit('6'); updateDisplay()" value="6">6</button>
+
+
+    <button type="button"  onclick= "inputDigit('1'); updateDisplay()" value="1">1</button>
+    <button type="button"  onclick= "inputDigit('2'); updateDisplay()" value="2">2</button>
+    <button type="button" onclick= "inputDigit('3'); updateDisplay()" value="3">3</button>
+
+
+    <button type="button" onclick= "inputDigit('0'); updateDisplay()" value="0">0</button>
+    <button type="button" class="decimal" onclick = "inputDecimal('.'); updateDisplay()"  value=".">.</button>
+    <button type="button" class="all-clear" onclick = "resetCalculator(); updateDisplay()" value="all-clear">AC</button>
+
+    <button type="button" class="equal-sign operator" onclick="handleOperator(); updateDisplay()" value="=">=</button>
+
+  </div>
+</div>
+</body>
+</html>
