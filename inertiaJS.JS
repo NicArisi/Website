@@ -5,19 +5,30 @@ const calculator = {
   Length: null,
   CMInertia: null,};
 
-function calculate(SetUp) {
+function processInputs(){
+	calculator.Mass = parseFloat(document.getElementById("Mass").value);
+	calculator.Radius = parseFloat(document.getElementById("Radius").value);
+	calculator.Length = parseFloat(document.getElementById("Length").value);
+	calculator.CMInertia = parseFloat(document.getElementById("CMInertia").value);
+}
+
+function calculate(operator) {
+  const mass = calculator.Mass;
+  const radius = calculator.Radius;
+  const length = calculator.Length;
+  const CMInertia = calculator.CMInertia;
   if (operator === 'Solid Cylinder') {
-    calculator.displayValue = 0.5*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 0.5*mass* Math.pow(radius,2);
   } else if (operator === 'Hoop') {
-    calculator.displayValue = mass*radius* Math.pow(radius,2);
+    calculator.displayValue = mass* Math.pow(radius,2);
   } else if (operator === 'Solid Sphere') {
-    calculator.displayValue = 2/5*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 2/5*mass* Math.pow(radius,2);
   }else if(operator === 'SolidCylinderAboutCentralDia'){
-    calculator.displayValue = 1/4*mass*Math.pow(radius,2)+(1/12)*mass*Math.pow(Length,2);
+    calculator.displayValue = ((1/4)*mass*Math.pow(radius,2))+((1/12)*mass*Math.pow(Length,2));
   }else if(operator === 'HoopAboutDiameter'){
-    calculator.displayValue = 1/2*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 1/2*mass* Math.pow(radius,2);
   }else if(operator === 'Rod about center of mass'){
-    calculator.displayValue = 1/2*mass*radius* Math.pow(radius,2);
+    calculator.displayValue = 1/2*mass* Math.pow(radius,2);
   }else if(operator === 'ThinSphericalShell'){
     calculator.displayValue = 2/3*mass*Math.pow(radius,2)
   }else if(operator === 'RodAboutEnd'){
@@ -25,6 +36,7 @@ function calculate(SetUp) {
   }else{
     calculator.displayValue = CMInertia+mass*math.pow(Length,2);
   }
+  updateDisplay();
 }
 
 function resetCalculator() {
