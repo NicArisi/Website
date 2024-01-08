@@ -11,7 +11,7 @@
   
     <form>
       
-      <label for="fname">Mass</label>
+      <label for="Mass">Mass</label>
       <input type="text" id="Mass" name="Mass"><br><br>
       
       <label for="Radius">Radius</label>
@@ -31,8 +31,8 @@
         <input type="button" class = "objectType" value="Hoop about diameter" onclick="processInputs(); calculate('HoopAboutDiameter'); updateDisplay()">
         <input type="button" class = "objectType" value="Thin spherical shell" onclick="processInputs(); calculate('ThinSphericalShell'); updateDisplay()">
         <input type="button" class = "objectType" value="Rod about end" onclick="processInputs(); calculate('RodAboutEnd'); updateDisplay()">
-        <input type="button" class = "objectType" value="Parallel Axis Theorom" onclick="processInputs()calculate(); updateDisplay()">
-        <input type="button" class = "objectType" value="All clear" onclick="resetCalculator(); updateDisplay()">
+        <input type="button" class = "objectType" value="Parallel Axis Theorom" onclick="processInputs(); calculate('ParallelAxisTheorom');updateDisplay()">
+        <input type="reset" class = "objectType" value="All clear" onclick="resetCalculator(); updateDisplay() ">
       </div>
     </form>
 </div>
